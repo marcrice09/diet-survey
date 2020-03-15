@@ -6,8 +6,10 @@ import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
 import asyncComponent from './components/AsyncComponent';
 
-import './App.css';
+import './App.scss';
+// eslint-disable-next-line import/first
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const AsyncLanding = asyncComponent(() => import('./containers/Landing'));
 const AsyncQuestion = asyncComponent(() => import('./containers/Question'));

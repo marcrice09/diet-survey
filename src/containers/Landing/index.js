@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Row } from 'react-bootstrap';
 
-//import Button from '../../components/Button';
-import './Landing.css';
+import './Landing.scss';
 
 class LandingPage extends Component {
   constructor(props) {
@@ -19,14 +18,20 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <Container className="landing-view">
-        <div className="landing-view-content">
+      <Container className="landing-page">
+        <Row className="justify-content-md-center ">
           <h1>Calculate your personal Pawprint</h1>
-          <p>Next we have a short 2-3 minute survey covering Diet, Home, Travel and Other that will let us caclulate your personal carbon footprint (or Parprint as we like to call it).</p>
-          <div>
-            <Button onClick={this.startSurvey} className="button--large">Take the survey</Button>
-          </div>
-        </div>
+        </Row>
+        <Row className="justify-content-md-center">
+          <p>
+            Next we have a short 2-3 minute survey covering Diet, Home,
+            Travel and Other that will let us calculate your personal carbon footprint
+            (or Parprint as we like to call it).
+          </p>
+        </Row>
+        <Row className="justify-content-md-center">
+          <Button onClick={this.startSurvey} className="button--large" size="lg">Take the survey</Button>
+        </Row>
       </Container>
     );
   }

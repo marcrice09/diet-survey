@@ -2,12 +2,14 @@
   "name": "simple-survey",
   "version": "0.1.0",
   "private": true,
-  "author": "Usama Hamed <usama.hamed2010@yahoo.com> (usamahamed.tk)",
+  "author": "Marc Rice",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "history": "^4.7.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "node-gyp": "^6.1.0",
+    "node-sass": "3.7.0",
     "prettier": "^1.11.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -15,7 +17,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "next",
+    "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "typeface-roboto": "^0.0.45"
@@ -46,6 +48,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.4.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.2",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0"
   }
