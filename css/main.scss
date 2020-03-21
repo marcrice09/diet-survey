@@ -1,0 +1,118 @@
+$bg: #f8f8f8;
+$white: #f8f8f8;
+$ctaBg: #65ad7e;
+$buttonWidth: 400px;
+$black: #272727;
+
+
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  color: #272727;
+}
+
+h1 {
+  color: $black;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.btn-primary {
+  
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix::after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  font-size: 0;
+  content: ' ';
+}
+
+body {
+  background: $bg;
+}
+
+h1 { 
+  max-width: $buttonWidth;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin:0px auto 20px auto;
+}
+
+p {
+  text-align:center;
+  max-width: $buttonWidth;
+  margin-bottom: 20px;
+}
+
+
+img {
+  padding:0;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background: $ctaBg;
+  border-color: transparent;
+}
+
+.cta {
+  width: $buttonWidth;
+  background: $ctaBg;
+  color: $white;
+  border:0;
+  border-radius: 0;
+}
+
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.landing-page {
+  .landing-view-content {
+    p {
+      clear:both;
+    }
+  }
+}
+
+.promo-img {
+  margin:0 auto 0 auto;
+  max-width: $buttonWidth;
+  padding:0;
+  height: 300px;
+}
+
+
+
+.header {
+  min-height: 50px;
+}
