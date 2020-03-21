@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 import MaterialRadioButton from '../MaterialRadioButton';
 import './AnswerField.css';
+
 
 class AnswerField extends Component {
   constructor(props) {
@@ -51,7 +53,26 @@ class AnswerField extends Component {
           ))}
         </div>
       );
+    } else if (type === 'button') {
+      return (
+        <div>
+          {values.map(option => (
+            <Button
+              className="answer-button button--large"
+              value={option.value}
+              label={option.name}
+              name="survey-question"
+              onClick={updateAnswer}
+              defaultChecked={answer === option.value}
+              size="lg"
+            >{option.value}
+            </Button>
+          ))}
+        </div>
+      );
     }
+
+
     return (null);
   }
 

@@ -5,7 +5,7 @@ const Questions = {
         id: 1,
         question: 'How often do you eat meat and dairy?',
         fieldProperties: {
-          type: 'radiobutton',
+          type: 'button',
           label: 'Placeholder text',
           values: [
             {
@@ -29,122 +29,110 @@ const Questions = {
         answer: '',
       },
       {
-        id: 1011,
-        question: 'If you could time travel, where would you go?',
+        id: 2,
+        question: 'How big are your portion sizes?',
         fieldProperties: {
-          type: 'dropdown',
+          type: 'button',
           label: 'Placeholder text',
           values: [
             {
-              name: 'Egypt',
-              value: 'Egypt',
+              name: 'Smaller than average',
+              value: 'Smaller than average',
             },
             {
-              name: 'Germany',
-              value: 'Germany',
+              name: 'Average',
+              value: 'Average',
             },
             {
-              name: 'Netherlands',
-              value: 'Netherlands',
+              name: 'Larger than average?',
+              value: 'Larger than average?',
+            },
+            {
+              name: 'I\'m not sure',
+              value: 'I\'m not sure',
             },
           ],
         },
         answer: '',
       },
       {
-        id: 1012,
-        question: 'What is your favourite sports you see?',
+        id: 3,
+        question: 'How much food ends up wasted in your household?',
         fieldProperties: {
-          type: 'radiobutton',
+          type: 'button',
           label: 'Placeholder text',
           values: [
             {
-              name: 'Athletics',
-              value: 'Athletics',
+              name: 'None',
+              value: 'None',
             },
             {
-              name: 'Cricket',
-              value: 'Cricket',
+              name: '1-5 plates per week',
+              value: '1-5 plates per week',
             },
             {
-              name: 'Football',
-              value: 'Football',
+              name: '6-10 plates per week',
+              value: '6-10 plates per week',
+            },
+            {
+              name: 'More than 10 plates per week',
+              value: 'More than 10 plates per week',
             },
           ],
         },
         answer: '',
       },
       {
-        id: 1013,
-        question: 'What types of credit cards do you have?',
+        id: 4,
+        question: 'How often do you eat avocados, asparagus, kiwi fruit or pineapple?',
         fieldProperties: {
-          type: 'radiobutton',
+          type: 'button',
           label: 'Placeholder text',
           values: [
             {
-              name: 'Visa',
-              value: 'VISA',
+              name: 'Daily',
+              value: 'Daily',
             },
             {
-              name: 'Master Card',
-              value: 'MasterCard',
+              name: '1 or 2 times',
+              value: '1 or 2 times',
             },
             {
-              name: 'American Express',
-              value: 'AmericanExpress',
+              name: '3+ times per week',
+              value: '3+ times per week',
             },
             {
-              name: 'Diners Club',
-              value: 'DinersClub',
+              name: 'Not at all',
+              value: 'Not at all',
             },
           ],
         },
         answer: '',
       },
       {
-        id: 1015,
-        question: 'What is your opinion on being single?',
+        id: 5,
+        question: 'How often do you eat seasonal veg from Europe?',
         fieldProperties: {
-          type: 'text',
-          label: 'Placeholder text',
-          values: [],
-        },
-        answer: '',
-      },
-      {
-        id: 1016,
-        question: 'Which season do you like the most?',
-        fieldProperties: {
-          type: 'dropdown',
+          type: 'button',
           label: 'Placeholder text',
           values: [
             {
-              name: 'Spring',
-              value: 'Spring',
+              name: 'Daily',
+              value: 'Daily',
             },
             {
-              name: 'Autumn',
-              value: 'Autumn',
+              name: '1 or 2 times',
+              value: '1 or 2 times',
             },
             {
-              name: 'Monsoon',
-              value: 'Monsoon',
+              name: '3+ times per week',
+              value: '3+ times per week',
             },
             {
-              name: 'Summer',
-              value: 'Summer',
+              name: 'Not at all',
+              value: 'Not at all',
             },
           ],
-        },
-        answer: '',
-      },
-      {
-        id: 1017,
-        question: 'Do you like spicy food and why?',
-        fieldProperties: {
-          type: 'text',
-          label: 'Placeholder text',
-          values: [],
         },
         answer: '',
       },

@@ -1,3 +1,30 @@
 .survey-success-wrapper {
   padding: 25px 0;
 }
+
+.card--survey--banner {
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.card--survey-success {
+  padding-top: 15px;
+  color: #f8f8f8;
+}
+
+.card--survey-success .row h1 {
+  color: #f8f8f8;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.card--survey-success .row h3 {
+  display: block;
+  color: #f8f8f8;
+  font-size: 20px;
+}
+
+.card--survey--success--summary {
+  padding-top: 80px;
+  color: #272727;
+}

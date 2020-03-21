@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
-import Header from '../../components/Header';
+import { Container } from 'react-bootstrap';
 import QuestionCard from '../../components/QuestionCard';
 import ProgressIndicator from '../../components/ProgressIndicator';
 import QuestionTypography from '../../components/QuestionTypography';
 import AnswerField from '../../components/AnswerField';
 import CardFooter from '../../components/CardFooter';
 import { submitAnswer } from './actions';
-
-import { Container, Button } from 'react-bootstrap';
-
 import './Question.css';
 
 class Question extends Component {
@@ -41,6 +37,10 @@ class Question extends Component {
       nextProps.match.params.id,
     );
     this.populateAnswer(nextProps.questionData.questions[currentPosition].answer);
+  }
+
+  componentDidCatch() {
+    this.setState({ hasError: true });
   }
 
   getCurrentQuestionPosition(questions, id) {
@@ -98,9 +98,6 @@ class Question extends Component {
     this.setState({ answer });
   }
 
-  componentDidCatch() {
-    this.setState({ hasError: true });
-  }
 
   render() {
     const currentQuestion = this.getCurrentQuestion();
@@ -110,7 +107,6 @@ class Question extends Component {
           <h1 className="text-center error">Oops! Something went wrong!</h1>
         ) : (
           <div>
-            <Header goBack={this.navigateBack} />
             <div className="question-card-wrapper">
               <QuestionCard>
                 <ProgressIndicator

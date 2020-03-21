@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
+import { Row } from 'react-bootstrap';
+
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Header from '../../components/Header';
 import Card from '../../components/Card';
-import QuestionTypography from '../../components/QuestionTypography';
-import Button from '../../components/Button';
-
 import { LOCAL_STORAGE_KEY } from '../../constants';
 import { resetStore } from '../Question/actions';
 import './SurveySuccess.css';
 
 class SurveySuccess extends Component {
   static getAnswer(question) {
-      return question.answer;
-   }
+    return question.answer;
+  }
 
   constructor(props) {
     super(props);
@@ -31,24 +29,25 @@ class SurveySuccess extends Component {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
     this.props.resetStore();
     this.props.history.go(-this.props.questions.length);
-
   }
 
   render() {
-    const { questions } = this.props;
     return (
       <React.Fragment>
-        <Header goBack={this.navigateBack} />
         <div className="survey-success-wrapper">
-          {questions.map(question => (
-            <Card className="card--survey-success" key={question.id}>
-              <QuestionTypography text={question.question} />
-              <div className="answer">{SurveySuccess.getAnswer(question)}</div>
-            </Card>
-          ))}
-          <div className="text-center">
-            <Button buttonClick={this.resetForm}>RESET FORM</Button>
-          </div>
+          <Card className="card--survey-success ">
+            <div className="card--survey--banner">
+              <Row>
+                <h1>Diet</h1>
+              </Row>
+              <Row className="justify-content-center ">
+                <h3 >Your Score</h3>
+              </Row>
+            </div>
+            <div className="text-center card--survey--success--summary">
+              UK National Average: 2.9 Tonnes <br /> of CO2 produced per year
+            </div>
+          </Card>
         </div>
       </React.Fragment>
     );

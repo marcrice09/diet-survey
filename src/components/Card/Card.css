@@ -6,15 +6,38 @@
   padding: 30px 30px 15px;
   border-radius: 10px;
   background-color: #fff;
+  border: none;
+  height: 600px;
 }
 
-.card--survey-success {
+.card.card--survey-success {
   border-radius: 5px;
-  padding-top: 15px;
+  padding: 0;
+  text-align: center;
+  font: #fff;
+}
+
+.card--survey-success .card--survey--banner {
+  background-color: #e9556b;
+}
+
+.card--survey-success p {
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
   .card {
     width: 94%;
   }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 200px;
+}
+
+footer.card-footer {
+  bottom: 100px;
 }
