@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import './ProgressIndicator.css';
 
@@ -18,6 +19,7 @@ const ProgressIndicator = props => (
         }}
       />
     </svg>
+
   </div>
 );
 

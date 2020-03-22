@@ -45,5 +45,6 @@ button.answer-button:hover {
 .answer-field {
   margin: 0 auto;
   text-align: center;
+  min-height: 370px;
 }
 

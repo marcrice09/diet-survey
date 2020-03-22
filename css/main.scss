@@ -4,7 +4,6 @@ $ctaBg: #65ad7e;
 $buttonWidth: 400px;
 $black: #272727;
 
-
 html,
 body {
   box-sizing: border-box;
@@ -78,9 +77,9 @@ img {
   border-color: transparent;
 }
 
-.btn-primary:hover {
-  background: $ctaBg;
-  border-color: transparent;
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: $ctaBg !important;
+  border-color: transparent !important;
 }
 
 .cta {
