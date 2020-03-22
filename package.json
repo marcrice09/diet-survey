@@ -23,11 +23,11 @@
     "typeface-roboto": "^0.0.45"
   },
   "lint-staged": {
-    "*.js": "eslint --ignore-path .gitignore",
+    "*.js": "eslint --ignore-path .gitignore"
     "*.css": "stylelint"
   },
   "scripts": {
-    "precommit": "lint-staged",
+    "////precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

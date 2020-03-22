@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import QuestionCard from '../../components/QuestionCard';
-import ProgressIndicator from '../../components/ProgressIndicator';
+import QuestionNumber from './QuestionNumber';
 import QuestionTypography from '../../components/QuestionTypography';
 import AnswerField from '../../components/AnswerField';
 import CardFooter from '../../components/CardFooter';
+
 import { submitAnswer } from './actions';
 import './Question.css';
 
@@ -98,6 +100,13 @@ class Question extends Component {
     this.setState({ answer });
   }
 
+  percentComplete() {
+    //return 80;
+    console.log('position', this.getCurrentQuestionPosition());
+    console.log( 'percent', ((this.getCurrentQuestionPosition() + 1) / this.props.questionData.questions.length) * 100);
+    return ((this.getCurrentQuestionPosition() + 1) / this.props.questionData.questions.length) * 100;
+    // return Math.round( (this.getCurrentQuestionPosition() + 1 / this.props.questionData.questions.length) * 100)
+  }
 
   render() {
     const currentQuestion = this.getCurrentQuestion();
@@ -109,10 +118,10 @@ class Question extends Component {
           <div>
             <div className="question-card-wrapper">
               <QuestionCard>
-                <ProgressIndicator
-                  progressPercentage={this.completedPercent()}
-                  currentQuestion={this.getCurrentQuestionPosition() + 1}
-                  totalQuestions={this.props.questionData.questions.length}
+                <ProgressBar variant="success" now={this.percentComplete()} />
+                <QuestionNumber 
+                  currentQuestion={this.getCurrentQuestionPosition() + 1} 
+                  totalQuestions={this.props.questionData.questions.length} 
                 />
                 <QuestionTypography text={currentQuestion.question} />
                 <AnswerField
