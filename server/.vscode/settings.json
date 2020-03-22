@@ -1,0 +1,36 @@
+{
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.options": { "configFile": "./.eslintrc" },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "flow.useNPMPackagedFlow": true,
+  "flow.runOnAllFiles": true,
+  "flow.pathToFlow": "\"${workspaceRoot}/node_modules/.bin/flow\"",
+  "cSpell.words": [
+    "autofetch",
+    "gitlens",
+    "Swiper",
+    "swiper",
+    "signup",
+    "zazu",
+    "signin",
+    "Unmount",
+    "xfbml",
+    "CLICKTHROUGH",
+    "effra",
+    "polyfill",
+    "qrcode",
+    "topup",
+    "kwacha",
+    "flowtype",
+    "rescan",
+    "tinfoilhat"
+  ],
+  "deepscan.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}

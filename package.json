@@ -23,15 +23,17 @@
     "typeface-roboto": "^0.0.45"
   },
   "lint-staged": {
-    "*.js": "eslint --ignore-path .gitignore"
-    "*.css": "stylelint"
+    "*.js": "eslint --ignore-path .gitignore",
+    "////*.css": "stylelint"
   },
   "scripts": {
     "////precommit": "lint-staged",
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"nodemon server/bin/www\"",
+    "server": "nodemon server/bin/www",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "proxy": "http://localhost:4000"
   },
   "jest": {
     "snapshotSerializers": [
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "babel-eslint": "7",
+    "concurrently": "^5.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -52,6 +55,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^4.0.2",
+    "nodemon": "^2.0.2",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0"
   }

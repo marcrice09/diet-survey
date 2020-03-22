@@ -101,11 +101,7 @@ class Question extends Component {
   }
 
   percentComplete() {
-    //return 80;
-    console.log('position', this.getCurrentQuestionPosition());
-    console.log( 'percent', ((this.getCurrentQuestionPosition() + 1) / this.props.questionData.questions.length) * 100);
     return ((this.getCurrentQuestionPosition() + 1) / this.props.questionData.questions.length) * 100;
-    // return Math.round( (this.getCurrentQuestionPosition() + 1 / this.props.questionData.questions.length) * 100)
   }
 
   render() {
