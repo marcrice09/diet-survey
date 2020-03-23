@@ -115,7 +115,7 @@ class Question extends Component {
             <div className="question-card-wrapper">
               <QuestionCard>
                 <ProgressBar variant="success" now={this.percentComplete()} />
-                <QuestionNumber 
+                <QuestionNumber
                   currentQuestion={this.getCurrentQuestionPosition() + 1} 
                   totalQuestions={this.props.questionData.questions.length} 
                 />

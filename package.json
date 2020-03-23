@@ -8,6 +8,7 @@
     "history": "^4.7.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
+    "mysql2": "^2.1.0",
     "node-gyp": "^6.1.0",
     "node-sass": "3.7.0",
     "prettier": "^1.11.1",

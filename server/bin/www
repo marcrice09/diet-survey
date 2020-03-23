@@ -2,9 +2,25 @@
 var debug = require('debug')('starterApp');
 var app = require('../app');
 
+
+
 app.set('port', process.env.PORT || 4000);
 
 var server = app.listen(app.get('port'), function() {
   console.log('express started ');
   debug('Express server listening on port ' + server.address().port);
 });
+
+
+
+
+
+
+// const Question = sequelize.define('question', {
+//   question: {
+//     type: Sequelize.STRING,
+//     field: 'question'
+//   }
+// }, {
+//   freezeTableName: true
+// });
